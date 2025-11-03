@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appedor | NAFDAC Approved Weight Gain Supplement</title>
+  
+  <!-- Styles -->
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin:0; background:#fffdfb; color:#2b2b2b; line-height:1.6; }
+    nav { background:#3a2e27; color:white; display:flex; justify-content:center; gap:25px; padding:15px; position:sticky; top:0; z-index:1000; }
+    nav a { color:white; text-decoration:none; font-weight:500; }
+    header { background:#fef3ed; text-align:center; padding:60px 20px; }
+    header img { margin-bottom:20px; }
+    header h1 { font-size:2.2em; color:#3a2e27; margin:0 auto 15px; max-width:750px; }
+    header p { font-size:1.1em; color:#5a4c45; margin:0 auto 25px; max-width:700px; }
+    .btn { display:inline-block; background:#db8a5f; color:white; padding:12px 25px; text-decoration:none; border-radius:6px; font-weight:500; }
+    .section { padding:60px 20px; text-align:center; }
+    .section h2 { color:#3a2e27; margin-bottom:15px; }
+    .blog-posts { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; max-width:1000px; margin:0 auto; }
+    .blog-post { background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:left; }
+    .blog-post h3 { margin-top:0; color:#3a2e27; }
+    .blog-post p { color:#5a4c45; }
+    footer { background:#3a2e27; color:white; text-align:center; padding:20px; font-size:0.9em; }
+    ul { list-style:none; padding:0; }
+    li { margin:8px 0; }
+    .product-image { margin:20px 0; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#product">Product</a>
+    <a href="#blogs">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header -->
+  <header id="home">
+    <img src="https://www.appedor.com/images/appedor-logo.png" alt="Appedor Logo" width="150">
+    <h1>We Exist to Help Those Who Cannot Eat and Feel Undernourished</h1>
+    <p>Appedor is a NAFDAC-approved weight gain supplement made with Cyproheptadine, Lysine, and Vitamins. Manufactured by TIL Healthcare, it gently restores appetite and helps your body regain nourishment naturally and safely.</p>
+    <a href="/shop" class="btn">Shop Appedor Now</a>
+  </header>
+
+  <!-- Product Section -->
+  <section class="section" id="product">
+    <h2>Why Choose Appedor?</h2>
+    <p>Formulated for people who struggle to eat or feel undernourished. Trusted across Nigeria.</p>
+
+    <!-- Product Image -->
+    <div class="product-image">
+      <img src="https://drive.google.com/uc?export=view&id=D178A079-D621-497A-B01B-9CF045A379AD" alt="Appedor Bottle" width="250">
+    </div>
+
+    <ul>
+      <li>🌿 NAFDAC-approved and safe</li>
+      <li>💖 Restores natural appetite gently</li>
+      <li>💫 Supports healthy weight gain</li>
+      <li>🏥 Manufactured by TIL Healthcare</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background-color:#fef3ed;">
+    <h2>What People Are Saying</h2>
+    <p>"Appedor helped me regain my appetite within a week. I finally enjoy food again!" — <strong>Ruth, Lagos</strong></p>
+    <p>"I felt weak and tired before, but Appedor changed everything. I feel alive again." — <strong>Chisom, Abuja</strong></p>
+  </section>
+
+  <!-- Blogs -->
+  <section class="section" id="blogs">
+    <h2>Educational Blogs</h2>
+    <div class="blog-posts" id="blogContainer">
+      <!-- Blog posts will load here -->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Call or WhatsApp us at <strong><a href="tel:+2349053693037">09053693037</a></strong></p>
+    <p><a href="https://wa.me/2349053693037" target="_blank">Chat on WhatsApp</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Appedor. All Rights Reserved.<br>Manufactured by TIL Healthcare | NAFDAC Approved</p>
+  </footer>
+
+  <!-- Load Blogs Dynamically -->
+  <script>
+    fetch('blogs.json')
+      .then(res => res.json())
+      .then(blogs => {
+        const container = document.getElementById('blogContainer');
+        blogs.forEach(blog => {
+          const post = document.createElement('div');
+          post.className = 'blog-post';
+          post.innerHTML = `
+            <h3>${blog.title}</h3>
+            <p>${blog.summary}</p>
+            <a href="${blog.link}">Read More →</a>
+          `;
+          container.appendChild(post);
+        });
+      })
+      .catch(err => console.error('Failed to load blogs:', err));
+  </script>
+</body>
+</html>
+{
+  "title": "Blog Title",
+  "summary": "Short summary of the blog post",
+  "link": "#"
+}
+call or whatsapp 09053693037
